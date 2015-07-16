@@ -1,0 +1,9 @@
+<nav class="content">
+    <ul class="">
+        <li class=""><a href="#inicio"><i class="fa fa-bullhorn"></i> - <i class="glyphicon glyphicon-music"></i></a></li>
+        {{#each site.menu}}
+            <li><a href="{{this.url}}">{{this.title}}</a></li>
+        {{/each}}
+    </ul>
+    <a href="#"><i class="fa fa-bars"></i></a>
+</nav>
