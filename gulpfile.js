@@ -64,6 +64,7 @@ gulp.task('connect', function () {
 // ---------------------------------------------------------------------------------------------------------------
 function startNodeWebkit () {
     if (childProcesses['node-webkit']) childProcesses['node-webkit'].kill();
+    // TODO: get the windows application, this works for mac only
     var nwProcess = childProcesses['node-webkit'] = child.spawn('/Applications/nwjs.app/Contents/MacOS/nwjs', ['./dist']);
 
     nwProcess.stderr.on('data', function (data) {
@@ -164,6 +165,14 @@ gulp.task('fonts', function() {
     .pipe(connect.reload());
 });
 
+// Copy package dot json file
+// we need the package for the node webkit builder
+// TODO: Fonts and package into a miscelaneous task copy?
+gulp.task('pack', function() {
+    gulp.src('./package.json')
+    .pipe(gulp.dest(paths.dist.root));
+});
+
 // Copy all static images
 gulp.task('images', function() {
     gulp.src(paths.dev.images)
@@ -203,7 +212,7 @@ gulp.task('watch', function() {
 // $ gulp et voila
 // ---------------------------------------------------------------------------------------------------------------
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['lint', 'scripts', 'hbs', 'fonts', 'images', 'sass', 'express', 'livereload', 'node-webkit', 'connect', 'watch']);
+gulp.task('default', ['lint', 'scripts', 'hbs', 'fonts', 'images', 'sass', 'pack', 'express', 'livereload', 'connect', 'watch']);
 
 //
 // End any living node-webkit process when exiting gulp process
