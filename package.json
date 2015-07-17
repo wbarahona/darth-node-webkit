@@ -26,6 +26,7 @@
     "browserify-shim": "^3.8.5",
     "connect-livereload": "^0.5.3",
     "express": "^4.12.3",
+    "flat-ui": "^2.1.1",
     "gulp": "^3.8.11",
     "gulp-build": "^0.5.3",
     "gulp-compile-handlebars": "^0.4.4",
@@ -56,7 +57,15 @@
   },
   "browser": {
     "bootstrap": "./node_modules/bootstrap/dist/js/bootstrap.js",
-    "jquery": "./node_modules/jquery/dist/jquery.js"
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "jqtouch": "./node_modules/flat-ui/js/jquery.ui.touch-punch.min.js",
+    "btselect": "./node_modules/flat-ui/js/bootstrap-select.js",
+    "btswitch": "./node_modules/flat-ui/js/bootstrap-switch.js",
+    "fuicheckbox": "./node_modules/flat-ui/js/flatui-checkbox.js",
+    "fuiradio": "./node_modules/flat-ui/js/flatui-radio.js",
+    "jqinput": "./node_modules/flat-ui/js/jquery.tagsinput.js",
+    "jqplaceholder": "./node_modules/flat-ui/js/jquery.placeholder.js",
+    "fuiapplication": "./node_modules/flat-ui/js/application.js"
   },
   "homepage": "https://github.com/wbarahona/darth-node-webkit",
   "window": {

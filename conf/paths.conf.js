@@ -5,7 +5,7 @@ module.exports = {
         dev: {
             scripts: './app/assets/scripts',
             fonts: './app/assets/fonts/**/*',
-            images: './app/assets/img/*',
+            images: './app/assets/img/**/*',
             styles: './app/assets/sass',
             hbs: {
                     root: './app/assets/templates',

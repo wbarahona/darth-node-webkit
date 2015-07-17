@@ -7,12 +7,14 @@
     @import 'includes/variables';
     @import 'includes/mixins';
     @import 'includes/colors';
+    @import 'includes/utilities';
 
 //
 // Load Sass/Scss libraries
 // ------------------------------------------------------------------------
     @import 'libs/fontawesome/font-awesome';
     @import 'libs/bootstrap/bootstrap';
+    @import 'libs/flatui/flatui';
 
 //
 // Load your custom styles in theme

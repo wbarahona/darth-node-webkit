@@ -81,7 +81,7 @@ process.stdin.on('data', function (data) {
 });
 
 // Build a standalone app
-gulp.task('node-webkit-build', function() {
+gulp.task('buildapp', function() {
     var nw = new NwBuilder({
         files: paths.dist.root+'/**/**', // use the glob format
         platforms: ['osx64', 'win32', 'win64']
